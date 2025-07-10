@@ -24,7 +24,7 @@ The data is fetched from Baserow
 """
 def getTrainingParticipantCounts():
     baserowAccess = BaserowAutomations(
-        baserow_token=os.environ.get('baserow_token',
+        baserow_token=os.environ.get('baserow_token'),
         activists_table_id=os.environ.get('activists_table_id'),
         event_reg_table_id=os.environ.get('event_registration_table_id'),
         recruitment_table_id=os.environ.get('recruitment_table_id')
