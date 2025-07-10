@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>משנים כיוון - הכשרות</title>
+    <link rel="stylesheet" href="{{    url_for('static', filename='index.css')}}"/>
+  </head>
+
+  <body dir="rtl">
+    <h1>משנים כיוון</h1>
+  </body>
+
+  <h2>ההכשרות הקרובות:</h2>
+  <table>
+    <thead>
+      <tr>
+        <!-- Add table headers based on your 'registers' data structure -->
+        <th>תאריך</th>
+        <th>כמה נרשמו</th>
+        <!-- Add more headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for training in training_dic %}
+      <tr>
+        <td>{{ training }}</td>
+        <td>{{ training_dic[training] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</html>
